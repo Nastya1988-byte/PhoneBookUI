@@ -11,10 +11,13 @@ public class AddContactTests extends TestBase {
 
     @BeforeMethod
     public void precondition() {
+        if (!app.getUser().isLoginLinkPresent()){
+            app.getUser().clickOnSignOutButton();
+        }
         app.getUser().clickOnLoginLink();
         app.getUser().fillRegisterLoginForm(new User().setEmail("test258phone$@gmail.com").setPassword("Nastya12#!"));
         app.getUser().clickOnLoginButton();
-    }
+        }
 
     @Test
     public void addContactPositiveTest() {
