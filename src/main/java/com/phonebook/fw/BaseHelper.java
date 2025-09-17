@@ -52,16 +52,16 @@ public class BaseHelper {
             throw new RuntimeException(e);
         }
     }
-    public String takeScreenschot(){
+    public String takeScreenshot(){
         File tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File screenschot = new File("screenshots/scree - " + System.currentTimeMillis() + ".png");
+        File screenshot = new File("screenshots/scree - " + System.currentTimeMillis() + ".png");
 
         try {
-            Files.copy(tmp, screenschot);
+            Files.copy(tmp, screenshot);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return screenschot.getAbsolutePath();
+        return screenshot.getAbsolutePath();
     }
 
 }

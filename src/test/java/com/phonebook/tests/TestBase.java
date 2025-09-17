@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import java.lang.reflect.Method;
+import java.util.Arrays;
 
 public class TestBase {
 
@@ -30,8 +31,8 @@ public class TestBase {
         app.stop();
     }
     @BeforeMethod
-    public void startTest(Method method){
-        logger.info("Start test" + method.getName());
+    public void startTest(Method method, Object[]p){
+        logger.info("Start test" + method.getName() + Arrays.asList(p));
     }
 
     @AfterMethod
@@ -42,7 +43,7 @@ public class TestBase {
         }else {
             logger.error("FAILED: "+ result.getMethod()
                     .getMethodName()+" Screenshot path: "+ app.getUser()
-                    .takeScreenschot());
+                    .takeScreenshot());
         }
         logger.info("Stop test");
         logger.info("*********************************************************");

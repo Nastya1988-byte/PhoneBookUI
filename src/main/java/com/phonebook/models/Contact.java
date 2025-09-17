@@ -1,6 +1,16 @@
 package com.phonebook.models;
 
-public class Contact{
+import java.util.StringJoiner;
+
+public class Contact {
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", Contact.class.getSimpleName() + "[", "]")
+                .add("phone='" + phone + "'")
+                .add("name='" + name + "'")
+                .toString();
+    }
+
     public String getName() {
         return name;
     }
