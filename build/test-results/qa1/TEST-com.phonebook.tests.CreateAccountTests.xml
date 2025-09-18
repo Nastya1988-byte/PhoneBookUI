@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.phonebook.tests.CreateAccountTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-09-16T08:18:07" hostname="DOM" time="1.131">
+  <properties/>
+  <testcase name="existetUserRegistrationNegative" classname="com.phonebook.tests.CreateAccountTests" time="1.131"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
